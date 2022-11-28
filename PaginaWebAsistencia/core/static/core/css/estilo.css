@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+    
+    
+}
+
+.imagen{
+    margin-top: 10px;
+}
+
+.codigoqr{
+    display: block;
+}
+
+.buton{
+    display: none;
+}
+

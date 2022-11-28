@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Pagina Web</title>
+    <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+</head>
+<body>
+    {% load user_agents %}
+    <nav class="navbar navbar-light bg-light" style="background-color: #563d7c ;">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Tecno
+        </a>
+      </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            
+            <img src="{% static 'core/img/uni2.jpg'%}" alt="Foto App" width="700" height="300">
+            
+        </div>
+    </div>
+</div>
+
+<div class="texto-principal">
+    <h2>Tu aplicacion para registrar tu asistencia esta aqui</h2>
+    <p>Con la Aplicacion de Tecno Nacional APP podras quedar registrado en tu clase con solo escanear su codigo Qr. O descargando la app con solo pinchar un boton</p>
+</div>
+
+{% if request|is_mobile %}
+<div class="buton">
+    
+    <a class="btn btn-warning" href="https://drive.google.com/file/d/18y2jy3X9O2s12QlrWJbWsguGagsJQTyv/view?usp=share_link" download="">Descargar App</a>´
+    
+</div>
+{% endif %}
+
+
+{% if request|is_pc %}
+<div class="codigoqr" id="qrcode">
+    
+    <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F18y2jy3X9O2s12QlrWJbWsguGagsJQTyv%2Fview%3Fusp%3Dshare_link&s=6&e=m" alt="Generador de Códigos QR Codes"/>
+
+    <br/><a href="https://www.codigos-qr.com/en/qr-code-generator/" target="_blank" id"qrgenerator"></a>
+    </div>
+    {% endif %}
+    
+    
+      
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
