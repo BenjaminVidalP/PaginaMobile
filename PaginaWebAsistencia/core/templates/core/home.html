@@ -15,22 +15,12 @@
     {% load user_agents %}
     <nav class="navbar navbar-light bg-light" style="background-color: #563d7c ;">
         <a class="navbar-brand" href="#">
-          <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-          Tecno
+            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Tecno
         </a>
-      </nav>
+        </nav>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            
-            <img src="{% static 'core/img/uni2.jpg'%}" alt="Foto App" width="700" height="300">
-            
-        </div>
-    </div>
-</div>
-
-<div class="texto-principal">
+<div class="container-fluid">
     <h2>Tu aplicacion para registrar tu asistencia esta aqui</h2>
     <p>Con la Aplicacion de Tecno Nacional APP podras quedar registrado en tu clase con solo escanear su codigo Qr. O descargando la app con solo pinchar un boton</p>
 </div>
@@ -45,12 +35,14 @@
 
 
 {% if request|is_pc %}
-<div class="codigoqr" id="qrcode">
+<div class="container-fluid">
+    <div class="codigoqr" id="qrcode">
     
-    <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F18y2jy3X9O2s12QlrWJbWsguGagsJQTyv%2Fview%3Fusp%3Dshare_link&s=6&e=m" alt="Generador de Códigos QR Codes"/>
+        <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F18y2jy3X9O2s12QlrWJbWsguGagsJQTyv%2Fview%3Fusp%3Dshare_link&s=6&e=m" alt="Generador de Códigos QR Codes"/>
 
     <br/><a href="https://www.codigos-qr.com/en/qr-code-generator/" target="_blank" id"qrgenerator"></a>
     </div>
+</div>
     {% endif %}
     
     

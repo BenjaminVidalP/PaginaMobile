@@ -1,7 +1,16 @@
 body{
     text-align: center;
-    
-    
+    color: #fff;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+
+    background: url(../img/portada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
 }
 
 .imagen{
@@ -16,3 +25,19 @@ body{
     display: none;
 }
 
+.container-fluid{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #ffde59;
+    padding: 10px;
+
+
+}
+
+h2{
+    color: black;
+}
+p{
+    color: black;
+}
